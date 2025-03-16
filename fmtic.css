@@ -38,6 +38,23 @@ header.hero {
     margin: 4px 2px;
     cursor: pointer;
   }
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.floating-button:hover {
+  background-color: #0056b3;
+}
 
 .hero-content {
     max-width: 800px;
