@@ -16,6 +16,28 @@ header.hero {
     background-position: center;
     animation: fadeIn 2s ease-in-out;
 }
+ #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+ }
+#cookie-banner button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
 
 .hero-content {
     max-width: 800px;
