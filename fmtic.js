@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll("section");
 
+document.getElementById('accept-cookies').onclick = function() {
+document.getElementById('cookie-banner').style.display = 'none';
+// Aqui você pode adicionar o código para salvar a preferência do usuário em um cookie
+};
+
     function revealSection() {
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
