@@ -76,7 +76,22 @@ p {
     font-size: 1.2em;
 }
 
-.cta {
+.ctaW {
+    display: inline-block;
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #25d366;
+}
+
+.ctaE {
     display: inline-block;
     background-color: #ff6600;
     color: #fff;
