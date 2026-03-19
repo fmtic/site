@@ -1,1 +1,1 @@
-# Este site foi criando usando a IA Copilot, portanto, não há nenhum direito autoral, exceto as logomarcas da empresa FMtic.
+Site feito por AI (ChatGPT e Grok), portanto, não possui direto autoral, exceto as logomarcas da FMtic.
