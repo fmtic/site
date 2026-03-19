@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Faixa superior azul - gradiente clássico que combina com TI */
+.main-header {
+    background: linear-gradient(135deg, #0A1F44, #1E90FF);
+    /* navy escuro → azul vivo */
+    color: white;
+    padding: 35px 20px;
+    /* confortável, não muito alto */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* sombra suave para destacar */
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    max-width: 240px;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.header-text p {
+    margin: 8px 0 0;
+    font-size: 1.15rem;
+    opacity: 0.95;
+}
+
+.header-cta {
+    background: #25d366;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s ease;
+}
+
+.header-cta:hover {
+    background: #128c7e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45);
+}
+
+/* Botão genérico */
+.btn {
+    background: linear-gradient(135deg, #FF6B00, #ff8c42);
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.5);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.btn:hover::after {
+    left: 125%;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.numeros {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.numeros div {
+    text-align: center;
+}
+
+.numeros strong {
+    font-size: 2rem;
+    display: block;
+}
+
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta .btn {
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 107, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+    }
+}
+
+/* Botão Whatsapp flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    display: block;
+}
+
+.whatsapp-float img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    animation: breathe 4s infinite ease-in-out;
+}
+
+.whatsapp-float:hover img {
+    transform: scale(1.12);
+    animation: none;
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+/* animação fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background: #111;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 3px solid #FF6B00;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Formulario de contato */
+.formulario {
+    background: #fff;
+    padding: 20px 20px;
+}
+
+.formulario p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1E90FF;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text {
+        margin: 20px 0;
+    }
+
+    .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-cta {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Banner da página de contato */
+.contato-hero {
+    background: linear-gradient(135deg, #0A1F44, #1E90FF);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contato-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.contato-hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Ajuste mobile */
+@media (max-width: 768px) {
+    .contato-hero {
+        padding: 60px 20px;
+    }
+
+    .contato-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+input:required:invalid,
+textarea:required:invalid {
+    border-color: #e74c3c;
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.3);
+}
+
+.contato-title {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    color: #0A1F44;
+    /* azul escuro do gradiente para combinar */
+    text-align: center;
+}
+
+.formulario p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Reset específico para botão de submit (evita borda preta do navegador) */
+button.btn,
+.btn-enviar {
+    appearance: none;
+    /* Remove estilo padrão do navegador */
+    -webkit-appearance: none;
+    border: none !important;
+    /* Remove qualquer borda */
+    outline: none;
+    background: #FF6B00;
+    /* Laranja sólido exato da sua imagem */
+    color: white;
+    padding: 16px 48px;
+    /* Mais largo e confortável */
+    font-size: 1.18rem;
+    font-weight: 700;
+    border-radius: 999px;
+    /* Cápsula perfeita (muito arredondado) */
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+    /* Sombra suave laranja */
+    transition: all 0.35s ease;
+    display: block;
+    margin: 30px auto 0;
+    width: 100%;
+    max-width: 340px;
+    /* Limita largura para não esticar demais */
+}
+
+/* Hover: elevação + sombra maior (efeito que combina com o tema) */
+button.btn:hover,
+.btn-enviar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 107, 0, 0.55);
+    background: #ff8533;
+    /* Laranja um pouco mais claro no hover (opcional, fica vivo) */
+}
+
+/* Remove qualquer borda residual em foco */
+button.btn:focus,
+.btn-enviar:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.3);
+}

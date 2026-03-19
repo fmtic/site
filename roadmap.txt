@@ -1,0 +1,12 @@
+site/
+├── css/
+│   └── style.css
+├── images/
+│   ├── logo-fmtic.png     ← sua logo real precisa estar aqui
+│   └── favicon.png
+├── includes/
+│   ├── header.html        ← exatamente como você mostrou
+│   └── footer.html
+├── js/
+│   └── script.js
+└── index.html             ← a página principal
