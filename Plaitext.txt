@@ -1,0 +1,24 @@
+/site-fmtic-com-br
+│
+├── /public
+|     ├── pequenas-empresas.html
+|     ├── ongs.html
+|     ├── educacao.html
+├── index.html
+│
+├── /css
+│   └── style.css
+│
+├── /js
+│   └── script.js
+│
+├── /img
+│   └── (imagens)
+
+
+🎨 PADRÃO DE CORES
+Azul: #38BDF8
+Verde: #22C55E
+Laranja: #F59E0B
+Roxo: #6366F1
+Fundo: #0f172a
