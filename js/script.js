@@ -14,3 +14,15 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "fmTIC service desk",
+  "areaServed": [
+    "São Gonçalo RJ",
+    "Itaboraí RJ",
+    "Zona da Mata MG"
+  ],
+  "url": "https://www.fmtic.com.br"
+}
