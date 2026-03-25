@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+
+    padding: 15px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo span {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-left: 5px;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #22c55e;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    padding: 200px 0 80px;
+}
+
+.hero-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.hero-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hero-text li {
+    margin: 10px 0;
+}
+
+.hero-img img {
+    width: 550px;
+}
+
+.segmentos {
+    background: #f1f5f9;
+    color: #0f172a;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.segmentos h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn.green {
+    background: #22c55e;
+}
+
+.centralizacao {
+    background: linear-gradient(135deg, #1e3a8a, #22c55e);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.centralizacao img {
+    width: 400px;
+    margin-top: 20px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    padding: 15px 20px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Animações */
+
+/* ANIMAÇÃO BASE */
+.reveal {
+    opacity: 1;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+}
+
+/* HERO ENTRADA */
+.hero-text {
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hero-text li {
+    font-size: 1.05rem;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HOVER NOS CARDS */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* BOTÃO MAIS VIVO */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* WHATSAPP PULSE */
+.whatsapp {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
